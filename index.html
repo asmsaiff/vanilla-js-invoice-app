@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <section class="mx-6 lg:mx-0 lg:w-10/12 xl:w-6/12 lg:mx-auto my-20 bg-white shadow-2xl">
+        <div class="p-8 bg-blue-600 grid grid-cols-2 gap-8">
+            <h1 class="text-white uppercase text-6xl self-center align-middle">invoice</h1>
+            <div class="flex justify-between">
+                <div class="self-center text-white">
+                    <h4>+88019508233XX</h4>
+                    <p>asmsaif15@gmail.com</p>
+                    <p>mail@s-saif.com</p>
+                </div>
+
+                <div class="self-center text-white">
+                    <h4>Mirpur 1</h4>
+                    <p>A block, Road - XX</p>
+                    <p>House - X, Dhaka - 1216</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-8 py-12 grid grid-cols-2 gap-8">
+            <div class="flex justify-between">
+                <div>
+                    <h4 class="text-gray-400 text-sm uppercase">Billed to -</h4>
+                    <p>Client Name</p>
+                    <p>Full Address</p>
+                    <p>Road no, Housing</p>
+                    <p>Area, City</p>
+                </div>
+
+                <div>
+                    <h4 class="text-gray-400 text-sm uppercase">Invoice Number -</h4>
+                    <p>#0000000</p>
+                    <h4 class="text-gray-400 text-sm uppercase mt-4">Date of issue -</h4>
+                    <p>22 Sept, 2021</p>
+                </div>
+            </div>
+            
+            <div class="text-right">
+                <h4 class="text-gray-400 text-sm uppercase">Invoice Totals -</h4>
+                <h1 class="uppercase text-6xl self-center font-thin">4000/-</h1>
+            </div>
+        </div>
+        <hr class="border-4 border-blue-600 mx-8 mb-8">
+
+        <form class="mx-8">
+            <div class="grid grid-cols-3 gap-8">
+                <input type="text" placeholder="Your Name" class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+                <input type="text" placeholder="Full Address" class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+                <input type="text" placeholder="City/Region" class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+            </div>
+            <div class="grid grid-cols-2 gap-8 mt-6">
+                <input type="text" placeholder="Item name..." class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+                <input type="text" placeholder="Description..." class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+            </div>
+            <div class="grid grid-cols-3 gap-8 mt-6">
+                <input type="number" placeholder="Quantity" class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+                <input type="number" placeholder="Cost/Rate" class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+                <input type="number" placeholder="Unit Cost" class="border focus:outline-none focus:border-gray-400 px-3 py-1">
+            </div>
+            <div class="grid grid-cols-3 gap-8 mt-6">
+                <div class="grid grid-cols-2 gap-6">
+                    <button type="submit" class="bg-blue-700 text-white py-1 rounded-sm">Submit</button>
+                    <button type="reset" class="bg-red-700 text-white py-1 rounded-sm">Reset</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="mx-8 mt-8">
+            <thead>
+                <tr>
+                    <th class="w-12 border">No.</th>
+                    <th class="w-3/5 border">Description</th>
+                    <th class="w-24 border">Qty.</th>
+                    <th class="w-32 border">Cost</th>
+                    <th class="w-32 border">Unit Cost</th>
+                    <th class="w-16 border">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center border">01</td>
+                    <td class="flex flex-col border pl-3">Item Name <span class="text-sm text-gray-500">Description</span></td>
+                    <td class="text-center border">1</td>
+                    <td class="text-center border">1000</td>
+                    <td class="text-center border">10</td>
+                    <td class="text-center border">X</td>
+                </tr>
+                <tr>
+                    <td class="text-center border">01</td>
+                    <td class="flex flex-col border pl-3">Item Name <span class="text-sm text-gray-500">Description</span></td>
+                    <td class="text-center border">1</td>
+                    <td class="text-center border">1000</td>
+                    <td class="text-center border">10</td>
+                    <td class="text-center border">X</td>
+                </tr>
+                <tr>
+                    <td class="text-center border">01</td>
+                    <td class="flex flex-col border pl-3">Item Name <span class="text-sm text-gray-500">Description</span></td>
+                    <td class="text-center border">1</td>
+                    <td class="text-center border">1000</td>
+                    <td class="text-center border">10</td>
+                    <td class="text-center border">X</td>
+                </tr>
+                <tr>
+                    <td class="text-center border">01</td>
+                    <td class="flex flex-col border pl-3">Item Name <span class="text-sm text-gray-500">Description</span></td>
+                    <td class="text-center border">1</td>
+                    <td class="text-center border">1000</td>
+                    <td class="text-center border">10</td>
+                    <td class="text-center border">X</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th class="w-12 border"></th>
+                    <th class="w-3/5 border text-right pr-3">Total -</th>
+                    <th class="w-24 border">12</th>
+                    <th class="w-32 border">12000</th>
+                    <th class="w-32 border">300</th>
+                    <td class="text-center border"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="w-60 ml-auto mt-12 mr-8">
+            <div class="flex justify-between mt-3 font-semibold">
+                <div class="flex flex-col">
+                    <p>Subtotal</p>
+                    <p>Tax</p>
+                    <p>Total</td>
+                </div>
+                <div class="flex flex-col">
+                    <span>:</span>
+                    <span>:</span>
+                    <span>:</span>
+                </div>
+                <div class="flex flex-col">
+                    <p>$12000</p>
+                    <p>$100</td>
+                    <p>$12300</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-8 grid grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-gray-400 text-sm uppercase">Invoice Terms -</h4>
+                <h1 class="font-semibold self-center font-thin">EX: Please, pay your invoice to...</h1>
+            </div>
+            <div class="flex justify-between">
+                <div class="self-center">
+                    <h4 class="font-semibold">Amount due(USD) -</h4>
+                </div>
+
+                <div class="self-center">
+                    <h4 class="font-semibold">$12300</h4>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-4 border-blue-600 mt-12">
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
