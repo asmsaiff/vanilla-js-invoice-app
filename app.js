@@ -1,4 +1,5 @@
 const invoice_form = document.getElementById("invoice_form");
+const delete_item = document.querySelectorAll("delete_item");
 
 // Form Data
 const your_name = document.getElementById('your_name')
@@ -15,6 +16,13 @@ const show_name = document.getElementById("show_name");
 const total_qty = document.getElementById("total_qty");
 const total_amount = document.querySelectorAll("#total_amount");
 const total_unit = document.getElementById("total_unit");
+const invoice_number = document.getElementById('invoice_number')
+const invoice_date = document.getElementById("invoice_date");
+const full_address = document.getElementById("full_address");
+const area = document.getElementById("area");
+
+invoice_number.innerHTML = "#" + Math.floor(100000 + Math.random() * 100000);
+invoice_date.innerHTML = new Date().toLocaleDateString()
 
 // Table Body
 const show_invoice_data = document.getElementById("show_invoice_data");
@@ -28,9 +36,17 @@ let unit = [];
 invoice_form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-    if (your_name.value == '' || item_name.value == '' || description.value == '' || qty.value == '' || flat_rate.value == '' || unit_rate.value == '') {
+    if (your_name.value == '' || item_name.value == '' || qty.value == '' || flat_rate.value == '' || unit_rate.value == '') {
         alert('Please, fill all input fields!!!')
     } else {
+        delete_item.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            delete_item.forEach((val, key) => {
+                val.classList.contains('delete')
+            })
+        })
+
         data = {
             name: your_name.value,
             address: address.value,
@@ -78,8 +94,15 @@ invoice_form.addEventListener('submit', (e) => {
             td5.innerHTML = val.unit_rate;
 
             const td6 = document.createElement("td");
-            td6.classList = "text-center border";
-            td6.innerHTML = "X";
+            td6.classList = 'text-center'
+            const dlt_btn = document.createElement('button')
+            dlt_btn.classList = "delete w-6 h-6 mx-auto rounded-sm bg-red-800 text-white text-sm font-semibold";
+            dlt_btn.id = 'delete_item'
+            dlt_btn.innerHTML = "X";
+            td6.appendChild(dlt_btn)
+            
+            full_address.innerHTML = val.address
+            area.innerHTML = val.city
 
             tr.appendChild(td1);
             tr.appendChild(td2);
