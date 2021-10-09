@@ -44,15 +44,7 @@ invoice_form.addEventListener('submit', (e) => {
 	) {
 		alert("Please, fill all input fields!!!");
 	} else {
-		// const delete_item = document.querySelectorAll("delete_item");
-
-		// delete_item.addEventListener('click', (e) => {
-		//     e.preventDefault()
-
-		//     delete_item.forEach((val, key) => {
-		//         val.classList.contains('delete')
-		//     })
-		// })
+		
 
 		data = {
 			name: your_name.value,
@@ -64,7 +56,17 @@ invoice_form.addEventListener('submit', (e) => {
 			flat_rate: flat_rate.value,
 			unit_rate: unit_rate.value,
 		},
-        form_data.push(data);
+		form_data.push(data);
+		
+		// window.addEventListener("click", (e) => {
+		// 	e.preventDefault();
+
+		// 	if (e.target.parentElement.classList.contains("delete")) {
+		// 		// e.target.parentElement.parentElement.remove();
+
+		// 		console.log(e.target.parentElement.parentElement);
+		// 	}
+		// });
 
 		form_data.forEach((val, key) => {
 			show_name.innerHTML = val.name;
@@ -132,14 +134,6 @@ invoice_form.addEventListener('submit', (e) => {
             
         });
 
-        // window.addEventListener("click", (e) => {
-		// 	e.preventDefault();
-
-		// 	if (e.target.parentElement.classList.contains("delete")) {
-		// 		e.target.parentElement.parentElement.remove();
-		// 	}
-		// });
-
 		form_data = [];
 
 		// Total Quantity Count
@@ -169,11 +163,13 @@ invoice_form.addEventListener('submit', (e) => {
 		for (let i = 0; i < unit.length; i++) {
 			totalUnit += unit[i];
 		}
-        total_unit.innerHTML = totalUnit;
-        
-        
+		total_unit.innerHTML = totalUnit;
     }
-    
-    
 })
 
+
+document.addEventListener('click', (e) => {
+	if (e.target.classList.contains('delete')) {
+		e.target.parentElement.parentElement.remove()
+	}
+})
